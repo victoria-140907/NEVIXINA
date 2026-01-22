@@ -1299,7 +1299,7 @@ GameObject:
   - component: {fileID: 204451137}
   m_Layer: 0
   m_Name: Strawberry_0 (6)
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1473,7 +1473,7 @@ GameObject:
   - component: {fileID: 212107690}
   m_Layer: 0
   m_Name: Idle
-  m_TagString: Untagged
+  m_TagString: PickUpMalo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1793,6 +1793,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9052402305648360541, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1987,7 +1991,7 @@ GameObject:
   - component: {fileID: 271941085}
   m_Layer: 0
   m_Name: Idle (2)
-  m_TagString: Untagged
+  m_TagString: PickUpMalo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3107,7 +3111,7 @@ GameObject:
   - component: {fileID: 386600937}
   m_Layer: 0
   m_Name: Idle (5)
-  m_TagString: Untagged
+  m_TagString: PickUpMalo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4498,7 +4502,7 @@ GameObject:
   - component: {fileID: 528833893}
   m_Layer: 0
   m_Name: Strawberry_0 (4)
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7945,7 +7949,7 @@ GameObject:
   - component: {fileID: 1139785692}
   m_Layer: 0
   m_Name: Idle (3)
-  m_TagString: Untagged
+  m_TagString: PickUpMalo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8690,7 +8694,7 @@ GameObject:
   - component: {fileID: 1238639293}
   m_Layer: 0
   m_Name: Idle (1)
-  m_TagString: Untagged
+  m_TagString: PickUpMalo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9194,7 +9198,7 @@ GameObject:
   - component: {fileID: 1331055415}
   m_Layer: 0
   m_Name: Strawberry_0 (2)
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10480,7 +10484,7 @@ GameObject:
   - component: {fileID: 1449327380}
   m_Layer: 0
   m_Name: Idle (4)
-  m_TagString: Untagged
+  m_TagString: PickUpMalo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10690,7 +10694,7 @@ GameObject:
   - component: {fileID: 1467602646}
   m_Layer: 0
   m_Name: Strawberry_0 (1)
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11044,7 +11048,7 @@ GameObject:
   - component: {fileID: 1508892943}
   m_Layer: 0
   m_Name: Idle (6)
-  m_TagString: Untagged
+  m_TagString: PickUpMalo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11768,7 +11772,7 @@ GameObject:
   - component: {fileID: 1676208698}
   m_Layer: 0
   m_Name: Strawberry_0 (3)
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12037,7 +12041,7 @@ GameObject:
   - component: {fileID: 1691696165}
   m_Layer: 0
   m_Name: Strawberry_0
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13594,7 +13598,7 @@ GameObject:
   - component: {fileID: 1882221801}
   m_Layer: 0
   m_Name: Idle (7)
-  m_TagString: Untagged
+  m_TagString: PickUpMalo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14032,7 +14036,7 @@ GameObject:
   - component: {fileID: 1931070590}
   m_Layer: 0
   m_Name: Strawberry_0 (8)
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15076,7 +15080,7 @@ GameObject:
   - component: {fileID: 2080433455}
   m_Layer: 0
   m_Name: Strawberry_0 (7)
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15322,7 +15326,7 @@ Transform:
   m_GameObject: {fileID: 2137526171}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.25, y: -2.54, z: 10}
+  m_LocalPosition: {x: 8.25, y: -2.55, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
