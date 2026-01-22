@@ -5881,7 +5881,7 @@ GameObject:
   - component: {fileID: 1657717242}
   - component: {fileID: 1657717241}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Vidas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6990,6 +6990,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1726890559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1986414614
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5757926445501152489, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.100052
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757926445501152489, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8570347
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757926445501152489, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757926445501152489, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757926445501152489, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757926445501152489, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757926445501152489, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757926445501152489, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757926445501152489, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757926445501152489, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052402305648360541, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9052402305648360541, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1986414616}
+  m_SourcePrefab: {fileID: 100100000, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+--- !u!1 &1986414615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9052402305648360541, guid: 0a3ad0ce359a3b54a90e72920d3b2f96, type: 3}
+  m_PrefabInstance: {fileID: 1986414614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1986414616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986414615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211248b9de322f142b2c2941c3d89754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  frutas: 0
+  vidas: 3
+  textofrutas: {fileID: 827570421}
+  textovidas: {fileID: 1657717241}
 --- !u!1 &1992051559
 GameObject:
   m_ObjectHideFlags: 0
@@ -8010,3 +8091,4 @@ SceneRoots:
   - {fileID: 1389733905}
   - {fileID: 2144368104}
   - {fileID: 87735582}
+  - {fileID: 1986414614}
