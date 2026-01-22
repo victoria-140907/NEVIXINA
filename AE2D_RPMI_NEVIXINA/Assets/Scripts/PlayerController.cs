@@ -3,6 +3,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Rigidbody2D playerrb;
+    private Animator anim;
+    private float horizontalInput;
+
+    public float speed;
+    public float jumpForce;
+    
+    
     public int frutas = 0;
     public int vidas = 3;
     public TextMeshProUGUI textofrutas;
@@ -26,12 +34,27 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        playerrb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Movement();
+        Jump();
     }
+
+    void Movement()
+    {
+        horizontalInput = Input.GetAxis("Horizontal");
+
+    }
+
+    void Jump()
+    {
+
+
+    }
+
 }
