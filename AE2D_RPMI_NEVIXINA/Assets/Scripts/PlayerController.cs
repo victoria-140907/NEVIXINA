@@ -48,11 +48,17 @@ public class PlayerController : MonoBehaviour
     void Movement()
     {
         horizontalInput = Input.GetAxis("Horizontal");
+        playerrb.linearVelocity = new Vector2(horizontalInput*speed, playerrb.linearVelocity.y);
 
     }
 
     void Jump()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerrb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+
+        }
 
 
     }
