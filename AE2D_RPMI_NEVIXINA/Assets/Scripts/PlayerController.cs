@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
 
+    private bool isFacingRight = true;
+
     [SerializeField] bool isGrounded;
     [SerializeField] GameObject groundCheck;
     [SerializeField] LayerMask groundLayer;
@@ -54,6 +56,23 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         playerrb.linearVelocity = new Vector2(horizontalInput*speed, playerrb.linearVelocity.y);
 
+        //Flip
+        if (horizontalInput > 0)
+        {
+            if (!isFacingRight)
+            {
+                Flip();
+            }
+
+        }
+
+        if (horizontalInput < 0)
+        {
+            if (isFacingRight)
+            {
+                Flip();
+            }
+        }
     }
 
     void Jump()
@@ -66,5 +85,16 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
+    void Flip()
+    {
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
+        isFacingRight = !isFacingRight;
+
+    }
+
+
 
 }
