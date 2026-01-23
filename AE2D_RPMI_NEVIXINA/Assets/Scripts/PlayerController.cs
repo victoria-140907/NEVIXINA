@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
     public float jumpForce;
-    
+
+    [SerializeField] bool isGrounded;
+    [SerializeField] GameObject groundCheck;
+    [SerializeField] LayerMask groundLayer;
     
     public int frutas = 0;
     public int vidas = 3;
@@ -41,6 +44,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
         Movement();
         Jump();
     }
@@ -54,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             playerrb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
 
