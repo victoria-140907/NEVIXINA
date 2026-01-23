@@ -59,24 +59,31 @@ public class PlayerController : MonoBehaviour
         //Flip
         if (horizontalInput > 0)
         {
+            anim.SetBool("Speed", true);
             if (!isFacingRight)
             {
                 Flip();
             }
 
         }
-
-        if (horizontalInput < 0)
+        else if (horizontalInput < 0)
         {
+            anim.SetBool("Speed", true);
             if (isFacingRight)
             {
                 Flip();
             }
         }
+        else if (horizontalInput == 0)
+        {
+            anim.SetBool("Speed", false);
+
+        }
     }
 
     void Jump()
     {
+       anim.SetBool("Jump", !isGrounded);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             playerrb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
