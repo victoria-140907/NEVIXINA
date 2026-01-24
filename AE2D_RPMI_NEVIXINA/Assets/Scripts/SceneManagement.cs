@@ -6,6 +6,10 @@ public class SceneManagement : MonoBehaviour
     // 1. PARA EL BOTÓN PLAY - va a Level1
     public void StartGame()
     {
+        // Cambiar a música de juego (índice 1)
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayMusic(1);
+
         SceneManager.LoadScene("Level1");
     }
 
@@ -18,6 +22,10 @@ public class SceneManagement : MonoBehaviour
     // 3. PARA EL BOTÓN BACK - vuelve a MainMenu
     public void GoToMainMenu()
     {
+        // Cambiar a música de menú (índice 0)
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayMusic(0);
+
         SceneManager.LoadScene("MainMenu");
     }
 
