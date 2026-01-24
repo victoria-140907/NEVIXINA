@@ -3,15 +3,33 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-
-    public void LoadScene(int sceneToLoad)
+    // 1. PARA EL BOTÓN PLAY - va a Level1
+    public void StartGame()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene("Level1");
     }
 
+    // 2. PARA EL BOTÓN SETTINGS - va a ExplanationScene
+    public void GoToExplanation()
+    {
+        SceneManager.LoadScene("ExplanationScene");
+    }
+
+    // 3. PARA EL BOTÓN BACK - vuelve a MainMenu
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    // 4. PARA EL BOTÓN EXIT - cierra el juego
     public void ExitGame()
     {
         Debug.Log("Has cerrado el juego");
-        Application.Quit();
+        
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 }

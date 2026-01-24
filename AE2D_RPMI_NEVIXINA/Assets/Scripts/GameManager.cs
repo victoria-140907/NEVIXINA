@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         // Si hay más escenas, carga la siguiente
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(nextSceneIndex)
+            SceneManager.LoadScene(nextSceneIndex);
         }
         else
         {
