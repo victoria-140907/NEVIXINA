@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool isGrounded;
     [SerializeField] GameObject groundCheck;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] int musicToPlay;
     
     public int frutas = 0;
     public int vidas = 3;
@@ -23,8 +24,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other. CompareTag("PickUp"))
+        if (other.CompareTag("PickUp"))
         {
+            AudioManager.Instance.PlaySFX(0);
             frutas++;
             textofrutas.text = "Frutas: " + frutas;
             Destroy(other.gameObject);
@@ -36,11 +38,14 @@ public class PlayerController : MonoBehaviour
             textovidas.text = "Vidas:" + vidas;
         }
     }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerrb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        //textovidas.text = "Vidas:" + Vidas;
+        AudioManager.Instance.PlayMusic(musicToPlay);
     }
 
     // Update is called once per frame
@@ -64,8 +69,8 @@ public class PlayerController : MonoBehaviour
             {
                 Flip();
             }
-
         }
+
         else if (horizontalInput < 0)
         {
             anim.SetBool("Speed", true);
@@ -74,10 +79,10 @@ public class PlayerController : MonoBehaviour
                 Flip();
             }
         }
+
         else if (horizontalInput == 0)
         {
             anim.SetBool("Speed", false);
-
         }
     }
 
@@ -86,11 +91,9 @@ public class PlayerController : MonoBehaviour
        anim.SetBool("Jump", !isGrounded);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
+            AudioManager.Instance.PlaySFX(1);
             playerrb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
-
         }
-
-
     }
 
     void Flip()
@@ -99,9 +102,5 @@ public class PlayerController : MonoBehaviour
         currentScale.x *= -1;
         transform.localScale = currentScale;
         isFacingRight = !isFacingRight;
-
     }
-
-
-
 }
