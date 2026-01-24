@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     void Jump()
     {
        anim.SetBool("Jump", !isGrounded);
