@@ -568,9 +568,9 @@ GameObject:
   m_Component:
   - component: {fileID: 159924467}
   - component: {fileID: 159924466}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain (16x16)_61
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6879,9 +6879,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2013979454}
   - component: {fileID: 2013979455}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain (16x16)_62 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
