@@ -167,7 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 42684996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33fe40af3810a90449a76c99f4a7e3f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b4d7edd36499494caeeb99a9d67188f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsButton
 --- !u!114 &42684999
