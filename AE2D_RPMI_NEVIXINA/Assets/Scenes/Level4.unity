@@ -2813,6 +2813,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8893492189607413060, guid: a75e94d4dfc711448aaaf6510402f3ee, type: 3}
+      propertyPath: textovidas
+      value: 
+      objectReference: {fileID: 1657717241}
+    - target: {fileID: 8893492189607413060, guid: a75e94d4dfc711448aaaf6510402f3ee, type: 3}
+      propertyPath: textofrutas
+      value: 
+      objectReference: {fileID: 827570421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
