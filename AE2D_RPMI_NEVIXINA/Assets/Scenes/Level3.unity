@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5032789ca10eef488014a80ca87d943, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicList:
   - {fileID: 8300000, guid: 37a4ab1c09249634db96247688fbcdd8, type: 3}
