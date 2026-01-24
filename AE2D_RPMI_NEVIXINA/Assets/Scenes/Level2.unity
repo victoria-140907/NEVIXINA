@@ -1424,6 +1424,7 @@ GameObject:
   - component: {fileID: 140119476}
   - component: {fileID: 140119475}
   - component: {fileID: 140119474}
+  - component: {fileID: 140119477}
   m_Layer: 0
   m_Name: Orange_0 (1)
   m_TagString: Untagged
@@ -1526,6 +1527,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1309161098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &140119477
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140119473}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
 --- !u!1 &149386823
 GameObject:
   m_ObjectHideFlags: 0
@@ -5137,6 +5174,7 @@ GameObject:
   - component: {fileID: 608763601}
   - component: {fileID: 608763600}
   - component: {fileID: 608763599}
+  - component: {fileID: 608763602}
   m_Layer: 0
   m_Name: Orange_0
   m_TagString: Untagged
@@ -5239,6 +5277,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1309161098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &608763602
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608763598}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
 --- !u!1 &611353825
 GameObject:
   m_ObjectHideFlags: 0
@@ -7057,6 +7131,7 @@ GameObject:
   - component: {fileID: 866332425}
   - component: {fileID: 866332424}
   - component: {fileID: 866332423}
+  - component: {fileID: 866332426}
   m_Layer: 0
   m_Name: Pineapple_0
   m_TagString: Untagged
@@ -7159,6 +7234,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1309161098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &866332426
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866332422}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
 --- !u!1 &874094205
 GameObject:
   m_ObjectHideFlags: 0
@@ -14532,6 +14643,7 @@ GameObject:
   - component: {fileID: 1758331410}
   - component: {fileID: 1758331409}
   - component: {fileID: 1758331408}
+  - component: {fileID: 1758331411}
   m_Layer: 0
   m_Name: Orange_0 (2)
   m_TagString: Untagged
@@ -14634,6 +14746,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1309161098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1758331411
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758331407}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
 --- !u!1 &1768271001
 GameObject:
   m_ObjectHideFlags: 0
