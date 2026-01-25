@@ -109,6 +109,9 @@ public class PlayerController : MonoBehaviour
 }*/
 
 
+
+            
+   
 using TMPro;
 using UnityEngine;
 
@@ -120,62 +123,28 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 5f;
     public float jumpForce = 12f;
-    public int maxJumps = 2; // <- Saltos máximos (2 para doble salto)
+    public int maxJumps = 2;
 
     private bool isFacingRight = true;
-    private int jumpsRemaining; // Contador de saltos restantes
+    private int jumpsRemaining;
 
     [SerializeField] private GameObject groundCheck;
     [SerializeField] private LayerMask groundLayer;
     
-    public int frutas = 0;
+    public GameObject collectedPrefab; // Arrastra el prefab de animación recogida aquí
+
     public int vidas = 3;
-    public TextMeshProUGUI textofrutas;
     public TextMeshProUGUI textovidas;
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("PickUp"))
-        {
-            // 1. Instanciar animación de recolección
-            GameObject collectedEffect = Instantiate(collectedPrefab, other.transform.position, Quaternion.identity);
-            
-            // 2. Reproducir sonido
-            AudioManager.Instance.PlaySFX(0);
-
-            // 3. Sumar fruta
-            frutas++;
-            textofrutas.text = "Frutas: " + frutas;
-
-            // 4. Destruir la fruta
-            Destroy(other.gameObject);
-
-            // 5. Destruir el efecto después de la animación
-            Destroy(collectedEffect, 1f);
-
-            if (other.CompareTag("PickUp"))
-            {
-                Debug.Log("¡Fruta recogida!");
-            }
-
-            /*// AudioManager.Instance.PlaySFX(0);
-            frutas++;
-            textofrutas.text = "Frutas: " + frutas;
-            Destroy(other.gameObject);*/
-        }
-
-        if (other.CompareTag("PickUpMalo"))
-        {
-            vidas--;
-            textovidas.text = "Vidas:" + vidas;
-        }
-    }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         jumpsRemaining = maxJumps;
+
+        // Actualizar UI al empezar nivel
+        if (GameManager.Instance != null)
+            GameManager.Instance.ActualizarUI();
     }
 
     void Update()
@@ -207,6 +176,39 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("PickUp"))
+        {
+            // Efecto de recolección
+            if (collectedPrefab != null)
+            {
+                GameObject collectedEffect = Instantiate(collectedPrefab, other.transform.position, Quaternion.identity);
+                Destroy(collectedEffect, 1f);
+            }
+
+            // Sonido
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlaySFX(0);
+
+            // Sumar fruta al GameManager
+            if (GameManager.Instance != null)
+                GameManager.Instance.SumarFruta();
+
+            // Destruir la fruta
+            Destroy(other.gameObject);
+
+            Debug.Log("¡Fruta recogida!");
+        }
+
+        if (other.CompareTag("PickUpMalo"))
+        {
+            // Restar vida al GameManager
+            if (GameManager.Instance != null)
+                GameManager.Instance.PerderVida();
+        }
+    }
+
     void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -214,6 +216,4 @@ public class PlayerController : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
-
-    public GameObject collectedPrefab; // Arrastra el prefab de animación recogida aquí
 }

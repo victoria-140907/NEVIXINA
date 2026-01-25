@@ -2466,6 +2466,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7430524b64b7945b18581e35fcd8df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  vidas: 3
+  frutas: 0
+  tiempoRestante: 120
+  frutasObjetivo: 10
+  textoVidas: {fileID: 0}
+  textoFrutas: {fileID: 0}
+  textoTiempo: {fileID: 0}
+  textoObjetivo: {fileID: 0}
+  panelVictoria: {fileID: 0}
+  panelDerrota: {fileID: 0}
 --- !u!1001 &855621054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10906,7 +10916,7 @@ Transform:
   m_GameObject: {fileID: 1985193438}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.93, y: 0.18, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

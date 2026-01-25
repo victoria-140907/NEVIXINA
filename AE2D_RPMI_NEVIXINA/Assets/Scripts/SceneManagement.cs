@@ -1,39 +1,46 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-    // 1. PARA EL BOT”N PLAY - va a Level1
+    // 1. PARA EL BOT√ìN PLAY - va a Level1
     public void StartGame()
     {
-        // Cambiar a m˙sica de juego (Ìndice 1)
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayMusic(1);
 
         SceneManager.LoadScene("Level1");
     }
 
-    // 2. PARA EL BOT”N SETTINGS - va a ExplanationScene
+    // 2. PARA EL BOT√ìN SETTINGS - va a ExplanationScene
     public void GoToExplanation()
     {
+        string current = SceneManager.GetActiveScene().name;
+        Debug.Log("ESCENA ACTUAL: " + current);
+
+        PlayerPrefs.SetString("PreviousScene", current);
+        PlayerPrefs.Save();
         SceneManager.LoadScene("ExplanationScene");
     }
 
-    // 3. PARA EL BOT”N BACK - vuelve a MainMenu
-    public void GoToMainMenu()
+    // 3. PARA EL BOT√ìN BACK - vuelve a la escena anterior
+    public void GoBackToPreviousScene()
     {
-        // Cambiar a m˙sica de men˙ (Ìndice 0)
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.PlayMusic(0);
+        string previousScene = PlayerPrefs.GetString("PreviousScene", "MainMenu");
 
-        SceneManager.LoadScene("MainMenu");
+        if (string.IsNullOrEmpty(previousScene)) // ‚Üê CORREGIDO: previousScene
+        {
+            previousScene = "MainMenu";
+        }
+
+        SceneManager.LoadScene(previousScene);
     }
 
-    // 4. PARA EL BOT”N EXIT - cierra el juego
+    // 4. PARA EL BOT√ìN EXIT - cierra el juego
     public void ExitGame()
     {
         Debug.Log("Has cerrado el juego");
-        
+
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #else
