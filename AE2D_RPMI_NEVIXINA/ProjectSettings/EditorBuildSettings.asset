@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Victory_SCN.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 15e6ae6fccb90f74f812ced39fb2ef50
@@ -15,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/ExplanationScene.unity
     guid: 48b9c2777a012af4e87999cd174a6842
   - enabled: 1
-    path: Assets/Scenes/vgEIUDSBHV.unity
-    guid: 2c800c6960a167a4bab9db682bea5551
+    path: Assets/Scenes/Level1.unity
+    guid: 28075ffd8d731444e9de033426363af5
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 575c4e09c0fcaa84dbe30c4bd1623dcf
@@ -26,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level4.unity
     guid: 2b5113b2598b9524fb6542f3ed7485b3
+  - enabled: 0
+    path: Assets/Scenes/GameOver_SCN.unity
+    guid: 5ba028eee887aaf4ea95d6237d7d5fdd
+  - enabled: 0
+    path: Assets/Scenes/Victory_SCN.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/EndMenu.unity
     guid: 332f95ff996291246bbf0c99d4d5009f
