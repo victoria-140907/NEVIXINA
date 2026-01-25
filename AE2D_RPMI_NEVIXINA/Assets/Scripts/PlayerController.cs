@@ -1,4 +1,4 @@
-using TMPro;
+/*using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -39,27 +39,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerrb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        //textovidas.text = "Vidas:" + Vidas;
         AudioManager.Instance.PlayMusic(musicToPlay);
     }
 
-    // Update is called once per frame
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
+
+        Debug.Log("isGrounded = " + isGrounded);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+             Debug.Log("ESPACIO PRESIONADO - isGrounded = " + isGrounded);
+        }
+
         Movement();
         Jump();
+
     }
 
     void Movement()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        playerrb.linearVelocity = new Vector2(horizontalInput*speed, playerrb.linearVelocity.y);
+        horizontalInput = Input.GetAxisRaw("Horizontal"); // Cambiado a GetAxisRaw
+        playerrb.linearVelocity = new Vector2(horizontalInput * speed, playerrb.linearVelocity.y); // CORREGIDO: velocity
 
         //Flip
         if (horizontalInput > 0)
@@ -70,7 +75,6 @@ public class PlayerController : MonoBehaviour
                 Flip();
             }
         }
-
         else if (horizontalInput < 0)
         {
             anim.SetBool("Speed", true);
@@ -79,29 +83,114 @@ public class PlayerController : MonoBehaviour
                 Flip();
             }
         }
-
         else if (horizontalInput == 0)
         {
             anim.SetBool("Speed", false);
         }
     }
 
-
     void Jump()
     {
-       anim.SetBool("Jump", !isGrounded);
+        anim.SetBool("Jump", !isGrounded);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             AudioManager.Instance.PlaySFX(1);
-            playerrb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+            playerrb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
-
+    
     void Flip()
     {
         Vector3 currentScale = transform.localScale;
         currentScale.x *= -1;
         transform.localScale = currentScale;
         isFacingRight = !isFacingRight;
+    }
+}*/
+
+
+using TMPro;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    private Rigidbody2D rb;
+    private Animator anim;
+    private float horizontalInput;
+
+    public float speed = 5f;
+    public float jumpForce = 12f;
+    public int maxJumps = 2; // <- Saltos máximos (2 para doble salto)
+
+    private bool isFacingRight = true;
+    private int jumpsRemaining; // Contador de saltos restantes
+
+    [SerializeField] private GameObject groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+    
+    public int frutas = 0;
+    public int vidas = 3;
+    public TextMeshProUGUI textofrutas;
+    public TextMeshProUGUI textovidas;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("PickUp"))
+        {
+            // AudioManager.Instance.PlaySFX(0);
+            frutas++;
+            textofrutas.text = "Frutas: " + frutas;
+            Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("PickUpMalo"))
+        {
+            vidas--;
+            textovidas.text = "Vidas:" + vidas;
+        }
+    }
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        jumpsRemaining = maxJumps;
+    }
+
+    void Update()
+    {
+        bool isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.3f, groundLayer);
+        
+        // Resetear saltos si está en el suelo
+        if (isGrounded)
+        {
+            jumpsRemaining = maxJumps;
+        }
+
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
+
+        // Animaciones
+        anim.SetBool("Speed", Mathf.Abs(horizontalInput) > 0.1f);
+        anim.SetBool("Jump", !isGrounded);
+
+        // Flip
+        if (horizontalInput > 0 && !isFacingRight) Flip();
+        if (horizontalInput < 0 && isFacingRight) Flip();
+
+        // Salto (con doble salto)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpsRemaining > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpsRemaining--;
+        }
+    }
+
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }
