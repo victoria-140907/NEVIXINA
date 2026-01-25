@@ -268,7 +268,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &94114756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,7 +1597,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &389002582
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,7 +2081,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &608763598
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,7 +2231,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &663312845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,6 +2550,10 @@ PrefabInstance:
       propertyPath: isGrounded
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8893492189607413060, guid: a75e94d4dfc711448aaaf6510402f3ee, type: 3}
+      propertyPath: collectedPrefab
+      value: 
+      objectReference: {fileID: 7197071039381176273, guid: a26f683245c85b94388aa7d0a17c9c05, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2704,7 +2708,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &862280402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,7 +2858,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &866332422
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,7 +3008,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &915403356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,7 +3158,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &962602225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,7 +3699,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &1268896096
 GameObject:
   m_ObjectHideFlags: 0
@@ -11116,7 +11120,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &2046857523
 GameObject:
   m_ObjectHideFlags: 0

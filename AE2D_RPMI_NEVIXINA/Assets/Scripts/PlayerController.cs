@@ -137,10 +137,31 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("PickUp"))
         {
-            // AudioManager.Instance.PlaySFX(0);
+            // 1. Instanciar animación de recolección
+            GameObject collectedEffect = Instantiate(collectedPrefab, other.transform.position, Quaternion.identity);
+            
+            // 2. Reproducir sonido
+            AudioManager.Instance.PlaySFX(0);
+
+            // 3. Sumar fruta
             frutas++;
             textofrutas.text = "Frutas: " + frutas;
+
+            // 4. Destruir la fruta
             Destroy(other.gameObject);
+
+            // 5. Destruir el efecto después de la animación
+            Destroy(collectedEffect, 1f);
+
+            if (other.CompareTag("PickUp"))
+            {
+                Debug.Log("¡Fruta recogida!");
+            }
+
+            /*// AudioManager.Instance.PlaySFX(0);
+            frutas++;
+            textofrutas.text = "Frutas: " + frutas;
+            Destroy(other.gameObject);*/
         }
 
         if (other.CompareTag("PickUpMalo"))
@@ -193,4 +214,6 @@ public class PlayerController : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
+
+    public GameObject collectedPrefab; // Arrastra el prefab de animación recogida aquí
 }

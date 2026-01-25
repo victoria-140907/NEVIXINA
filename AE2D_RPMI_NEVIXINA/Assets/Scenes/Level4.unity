@@ -1535,6 +1535,7 @@ GameObject:
   - component: {fileID: 1389733903}
   - component: {fileID: 1389733907}
   - component: {fileID: 1389733906}
+  - component: {fileID: 1389733908}
   m_Layer: 0
   m_Name: Checkpoint (Flag Idle)(64x64)_0
   m_TagString: Untagged
@@ -1695,6 +1696,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &1389733908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389733902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7430524b64b7945b18581e35fcd8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1 &1426433068
 GameObject:
   m_ObjectHideFlags: 0
