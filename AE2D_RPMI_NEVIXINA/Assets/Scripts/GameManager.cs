@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public int frutas = 0;
     public float tiempoRestante = 120f; // 2 minutos por nivel
 
+    // ESTADO DE PAUSA
+    public bool IsPaused { get; set; } = false;
+
     // Objetivo del nivel actual
     public int frutasObjetivo = 10;
 
@@ -64,17 +67,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ActualizarUI()
+   public void ActualizarUI()
+{
+    if (textoVidas != null)
     {
-        if (textoVidas != null)
-            textoVidas.text = "Vidas: " + vidas;
-        if (textoFrutas != null)
-            textoFrutas.text = "Frutas: " + frutas + " / " + frutasObjetivo;
-        if (textoTiempo != null)
-            textoTiempo.text = "Tiempo: " + Mathf.FloorToInt(tiempoRestante);
-        if (textoObjetivo != null)
-            textoObjetivo.text = "Objetivo: " + frutasObjetivo + " frutas";
+        textoVidas.text = "Lives: " + vidas;
     }
+    if (textoFrutas != null)
+    {
+        textoFrutas.text = "Fruits: " + frutas + " / " + frutasObjetivo;
+    }
+    if (textoTiempo != null)
+    {
+        int minutos = Mathf.FloorToInt(tiempoRestante / 60);
+        int segundos = Mathf.FloorToInt(tiempoRestante % 60);
+        textoTiempo.text = "Time: " + string.Format("{0:00}:{1:00}", minutos, segundos);
+    }
+    if (textoObjetivo != null)
+    {
+        textoObjetivo.text = "Goal: " + frutasObjetivo + " fruits";
+    }
+}
 
     public void SumarFruta()
     {
@@ -143,4 +156,5 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
+
 }
