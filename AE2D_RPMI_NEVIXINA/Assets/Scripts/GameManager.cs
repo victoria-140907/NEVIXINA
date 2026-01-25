@@ -48,6 +48,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        // AGREGAR ESTA LÍNEA: Detener actualización si el juego está pausado
+        if (IsPaused) return;
+        
         if (tiempoRestante > 0)
         {
             tiempoRestante -= Time.deltaTime;
@@ -60,11 +63,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // Verificar victoria
+        /* Verificar victoria
         if (frutas >= frutasObjetivo)
         {
             GanarNivel();
-        }
+        }*/
     }
 
    public void ActualizarUI()
@@ -106,14 +109,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void GanarNivel()
+    public void GanarNivel()
     {
         Time.timeScale = 0f; //Pausa el juego
         if (panelVictoria != null) 
             panelVictoria.SetActive(true);
     }
 
-    void PerderNivel(string motivo)
+    public void PerderNivel(string motivo)
     {
         Time.timeScale = 0f;
         if (panelDerrota != null)
@@ -156,5 +159,4 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
-
 }
