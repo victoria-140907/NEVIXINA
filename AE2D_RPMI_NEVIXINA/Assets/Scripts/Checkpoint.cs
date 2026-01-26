@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    public Button pauseButton;
-
     public bool isFinalCheckpoint = false; // Marca si es el checkpoint final
 
     private void OnTriggerEnter2D(Collider2D other)
