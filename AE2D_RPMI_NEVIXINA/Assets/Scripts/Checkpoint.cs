@@ -1,14 +1,28 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour
 {
+    public Button pauseButton;
+
+    public bool isFinalCheckpoint = false; // Marca si es el checkpoint final
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-       // Si colisiona con el jugador y existe el GameManager
-       if (other.CompareTag("Player") && GameManager.Instance != null)
-       {
-           GameManager.Instance.GoToNextLevel();
-       }
+        if (other.CompareTag("Player"))
+        {
+            if (isFinalCheckpoint)
+            {
+                // Verificar si el jugador tiene todas las frutas
+                if (GameManager.Instance.frutas >= GameManager.Instance.frutasObjetivo)
+                {
+                    GameManager.Instance.GanarNivel();
+                }
+                else
+                {
+                    Debug.Log("¡Necesitas más frutas para pasar!");
+                    // Aquí podrías mostrar un mensaje en pantalla
+                }
+            }
+        }
     }
 }
