@@ -17,12 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 575c4e09c0fcaa84dbe30c4bd1623dcf
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: b74798194f33ef24ea711a1f25dcc4b1
   - enabled: 1
     path: Assets/Scenes/Level4.unity
     guid: 2b5113b2598b9524fb6542f3ed7485b3
+  - enabled: 1
+    path: Assets/Scenes/Victory_SCN.unity
+    guid: 568b518909d675e4dbc95afb7f881c70
   - enabled: 1
     path: Assets/Scenes/EndMenu.unity
     guid: 332f95ff996291246bbf0c99d4d5009f
