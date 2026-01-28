@@ -615,8 +615,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2043379192}
-        m_TargetAssemblyTypeName: BackButton, Assembly-CSharp
+      - m_Target: {fileID: 2043379191}
+        m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
         m_MethodName: GoBackToPreviousScene
         m_Mode: 1
         m_Arguments:
@@ -987,6 +987,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 49ead811ab28e7347ad102f320cd19e7, type: 3}
   musicSource: {fileID: 742950102}
   sfxSource: {fileID: 1185579652}
+  fadeDuration: 1
 --- !u!4 &1768613297
 Transform:
   m_ObjectHideFlags: 0
@@ -1118,7 +1119,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2043379190}
   - component: {fileID: 2043379191}
-  - component: {fileID: 2043379192}
   m_Layer: 5
   m_Name: Controlador
   m_TagString: Untagged
@@ -1157,18 +1157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4d7edd36499494caeeb99a9d67188f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneManagement
---- !u!114 &2043379192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043379189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81dd929cacce3d4eb42a81813a067f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BackButton
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

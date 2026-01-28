@@ -20,7 +20,7 @@ public class Fruit : MonoBehaviour
             GameManager.Instance.frutas += 1;
             GameManager.Instance.ActualizarUI();
             
-            Debug.Log($"✅ +1 Fruta. Total: {GameManager.Instance.frutas}");
+            Debug.Log($" +1 Fruta. Total: {GameManager.Instance.frutas}");
             
             // Hacer invisible y destruir después
             GetComponent<SpriteRenderer>().enabled = false;
